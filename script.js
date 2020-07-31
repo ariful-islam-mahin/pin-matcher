@@ -1,3 +1,24 @@
+function massageRemove() {
+    document.getElementById('wrong').style = "display:none !important" 
+    document.getElementById('right').style = "display:none !important" 
+}
+
+function number(num) {
+    document.getElementById('passwordInput').value = document.getElementById('passwordInput').value + num;
+    massageRemove()
+}
+
+function backSpace() {
+    const passwordInput = document.getElementById('passwordInput').value;
+    document.getElementById('passwordInput').value = passwordInput.substr(0, passwordInput.length -1);
+    massageRemove()
+}
+
+function clearScreen() {
+    document.getElementById('passwordInput').value = "";
+    massageRemove()
+}
+
 function randomNum() {
     document.getElementById('generateInput').value = Math.round(1000 + Math.random() * 8999);
     massageRemove()
@@ -30,24 +51,7 @@ function submit() {
     }  
 }
 
-function number(num) {
-    let passwordInput = document.getElementById('passwordInput');
-    passwordInput.value = passwordInput.value + num;
-    massageRemove()
-}
 
-function backSpace() {
-    const passwordInput = document.getElementById('passwordInput').value;
-    document.getElementById('passwordInput').value = passwordInput.substr(0, passwordInput.length -1);
-    massageRemove()
-}
 
-function clearScreen() {
-    document.getElementById('passwordInput').value = "";
-    massageRemove()
-}
 
-function massageRemove() {
-        document.getElementById('wrong').style = "display:none !important" 
-        document.getElementById('right').style = "display:none !important" 
-}
+
