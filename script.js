@@ -20,7 +20,7 @@ function clearScreen() {
 }
 
 function randomNum() {
-    document.getElementById('generateInput').value = Math.round(1000 + Math.random() * 8999);
+    document.getElementById('generateInput').value = Math.round(1000 + Math.random() * 9000);
     massageRemove()
     clearScreen()
     document.getElementById('tryCount').innerText = 3;
